@@ -1,0 +1,7 @@
+this is a simple docker volume exercise
+
+i created two logger containers that write in the shared docker volume 
+
+and the third container reads the written logs 
+
+docker run -it -v log-db:/logs alpine sh -c "tail -f /logs/database"
