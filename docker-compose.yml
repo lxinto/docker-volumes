@@ -1,0 +1,19 @@
+services: 
+  logger1: 
+    image: container1:1.0
+    volumes:
+      - log-db:/logs
+  
+  logger2: 
+    image: container2:1.0
+    volumes:
+      - log-db:/logs
+
+  reader: 
+    image: alpine
+    volumes:
+      - log-db:/logs
+    command: sh -c "tail -f /logs/database"
+
+volumes:
+  log-db:
