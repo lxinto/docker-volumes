@@ -5,3 +5,10 @@ i created two logger containers that write in the shared docker volume
 and the third container reads the written logs 
 
 docker run -it -v log-db:/logs alpine sh -c "tail -f /logs/database"
+
+
+
+## Added docker compose
+
+
+just run "docker compose up" 
